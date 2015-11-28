@@ -4,6 +4,12 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/check.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grandPapa.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grandPapa.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/papa.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/papa.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/son.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/son.h" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

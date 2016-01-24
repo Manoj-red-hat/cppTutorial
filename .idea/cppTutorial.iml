@@ -2,6 +2,11 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
+      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+    </content>
+=======
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/check.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grandPapa.cpp" isTestSource="false" />
@@ -12,10 +17,22 @@
       <sourceFolder url="file://$MODULE_DIR$/son.h" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
+>>>>>>> 8ae0ca459b9d542660a447cc5ff98ae4a187a737
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
+<<<<<<< HEAD
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
+          <root url="file:///usr/include" />
+=======
           <root url="file:///usr/include" />
           <root url="file:///usr/lib/gcc/x86_64-redhat-linux/4.8.3/include" />
           <root url="file:///usr/local/include" />
@@ -23,6 +40,7 @@
         <SOURCES>
           <root url="file:///usr/include" />
           <root url="file:///usr/lib/gcc/x86_64-redhat-linux/4.8.3/include" />
+>>>>>>> 8ae0ca459b9d542660a447cc5ff98ae4a187a737
           <root url="file:///usr/local/include" />
         </SOURCES>
       </library>

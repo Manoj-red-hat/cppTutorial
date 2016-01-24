@@ -6,7 +6,7 @@
 #include "papa.h"
 #include "son.h"
 
-int main(){
+int main() {
 
     //grandPapa p=grandPapa(1,2,3);
     //p.printGrandPapaFavouriteNumbers();

@@ -4,9 +4,10 @@
 using namespace std;
 // base Class
 class Employee{
-	private:
-	string name;
+
+	protected:
 	double pay;
+	string name;
 	public:
 	Employee(){name="";pay=0;}
 	Employee(string empName, double payRate){
@@ -30,6 +31,10 @@ class Employee{
 		pay=payRate;
 	}
 
+	int grossPay(int hours){
+		return pay*hours;
+	}
+
 	string toString(){
 		stringstream stm;
 		stm<<name<<" : " <<pay;
@@ -39,7 +44,7 @@ class Employee{
 
 //Base class
 
-class Manager: Employee{
+class Manager: public Employee{
 private:
 	bool isSalried;
 public:
@@ -48,16 +53,37 @@ public:
 	}
 
 	bool getIsSalriedEmp(){
+
 		return isSalried;
 	}
 
+	int grossPay(int hours){
+		if (isSalried)
+			return pay;
+		else
+			return pay*hours;
+	}
+
+	string toString(){
+			stringstream stm;
+			string salary;
+			if (isSalried)
+				salary="Salaried";
+			else
+				salary="Hourly";
+
+			stm<<name<<" : " <<pay<<" : "<<salary;
+			return stm.str();
+		}
+
 };
-	int main()
+	int INmain()
 {
-	Employee emp1("Jane Smith",35000);
-	Employee emp2("Bill Brown",56000);
-	cout<<emp1.toString()<<endl;
-	cout<<emp2.toString()<<endl;
-	Manager emp3("Ram Prakash",2000000,"TRUE");
-	emp3.getIsSalriedEmp();
+	Employee emp1("Jane Smith",350);
+	cout<<emp1.toString();
+	cout<< " gross pay "<<emp1.grossPay(40)<<endl;
+
+	Manager emp3("Ram Prakash",200000,"TRUE");
+	cout<<emp3.toString();
+
 }

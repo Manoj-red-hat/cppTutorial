@@ -36,10 +36,28 @@ class Employee{
 		return stm.str();
 	}
 };
+
+//Base class
+
+class Manager: Employee{
+private:
+	bool isSalried;
+public:
+	Manager(string empName, int payRate, bool salried):Employee(empName,payRate){
+		isSalried=salried;
+	}
+
+	bool getIsSalriedEmp(){
+		return isSalried;
+	}
+
+};
 	int main()
 {
 	Employee emp1("Jane Smith",35000);
 	Employee emp2("Bill Brown",56000);
 	cout<<emp1.toString()<<endl;
 	cout<<emp2.toString()<<endl;
+	Manager emp3("Ram Prakash",2000000,"TRUE");
+	emp3.getIsSalriedEmp();
 }

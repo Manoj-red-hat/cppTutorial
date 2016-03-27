@@ -27,7 +27,7 @@ public:
 ;
 };
 
-int main(){
+int Absmain(){
 	Cat b;
 	Dog d;
 	vector<Animal*> animal;

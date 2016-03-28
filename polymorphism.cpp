@@ -15,7 +15,7 @@ class EmployeePoly{
 		name=empName;
 		pay=payRate;
 	}
-	virtual ~EmployeePoly(){cout<<"Employee distructor called"<<endl;}
+	//virtual ~EmployeePoly(){cout<<"Employee distructor called"<<endl;}
 
 	string getName(){
 		return name;
@@ -33,7 +33,7 @@ class EmployeePoly{
 		pay=payRate;
 	}
 
-	 virtual int grossPay(int hours){
+	 virtual  int grossPay(int hours){
 		return pay*hours;
 	}
 
@@ -53,13 +53,13 @@ public:
 	ManagerPoly(string empName, int payRate, bool salried):EmployeePoly(empName,payRate){
 		isSalried=salried;
 	}
-	 virtual ~ManagerPoly(){cout<<"Manager distructor called"<<endl;}
+	 //virtual ~ManagerPoly(){cout<<"Manager distructor called"<<endl;}
 	bool getIsSalriedEmp(){
 
 		return isSalried;
 	}
 
-	virtual int grossPay(int hours){
+	virtual   int grossPay(int hours){
 		if (isSalried)
 			return pay;
 		else
@@ -79,15 +79,19 @@ public:
 		}
 
 };
-	int Polymain()
+	int main()
 {
 		EmployeePoly emp("Jane Smith",350);
 		ManagerPoly mgr("Ram Prakash",2000,"TRUE");
+		EmployeePoly *base;
+		cout<<mgr.grossPay(50)<<endl;
+		base=&mgr;
+		cout<<base->grossPay(50)<<endl;
 
-		//Virtual Distructor
-		EmployeePoly *empPtr;
-		empPtr=&mgr;
-		delete empPtr;
+//		virtual Distructor
+//		EmployeePoly *empPtr;
+//		empPtr=&mgr;
+//		delete empPtr;
 
 
 

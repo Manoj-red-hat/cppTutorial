@@ -15,7 +15,7 @@ T max(T arg1, T arg2, bool asc=true){
 	return asc==true ? ((arg1 > arg2) ? arg1 : arg2) : ((arg1 > arg2) ? arg2 : arg1);
 }
 
-int main(){
+int GENmain(){
 	vector<int> number(10);
     vector<int>::iterator it;
     for (it=number.begin();it<number.end();it++){

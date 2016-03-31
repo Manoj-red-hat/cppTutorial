@@ -157,4 +157,32 @@ Finally, all containers provide (at least) two types of iterators:
 container::iterator provides a read/write iterator
 container::const_iterator provides a read-only iterator
 Lets take a look at some examples of using iterators.
-_____________________________________________________________________________________________________
+_____________________________________________________________________________________________________	
+
+I know references are syntactic sugar, so code is easier to read and write.
+
+But what are the differences?
+
+Summary from answers and links below:
+
+    A pointer can be re-assigned any number of times while a reference can not be re-seated after binding.
+    Pointers can point nowhere (NULL), whereas reference always refer to an object.
+    You can't take the address of a reference like you can with pointers.
+    There's no "reference arithmetics" (but you can take the address of an object pointed by a reference and do pointer arithmetics on it as in &obj + 5).
+
+To clarify a misconception:
+
+    The C++ standard is very careful to avoid dictating how a compiler must implement references, but every C++ compiler implements references as pointers. That is, a declaration such as:
+
+    int &ri = i;
+
+    if it's not optimized away entirely, allocates the same amount of storage as a pointer, and places the address of i into that storage.
+
+So, a pointer and a reference both occupy the same amount of memory.
+
+As a general rule,
+
+    Use references in function parameters and return types to define useful and self-documenting interfaces.
+    Use pointers to implement algorithms and data structures.
+
+_______________________________________________________________________________________________________

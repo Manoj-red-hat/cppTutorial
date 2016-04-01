@@ -79,7 +79,7 @@ public:
 		}
 
 };
-	int main()
+	int Polymain()
 {
 		EmployeePoly emp("Jane Smith",350);
 		ManagerPoly mgr("Ram Prakash",2000,"TRUE");

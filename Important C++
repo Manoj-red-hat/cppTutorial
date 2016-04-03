@@ -186,3 +186,27 @@ As a general rule,
     Use pointers to implement algorithms and data structures.
 
 _______________________________________________________________________________________________________
+try
+{
+  rapidxml::file<char> GpxFile (pcharfilename);
+}
+catch (const runtime_error& error)
+{
+   // your error handling code here
+}
+catch (const std::out_of_range& another_error)
+{
+   // different error handling code
+}
+catch (...)
+{
+   // if an exception is thrown that is neither a runtime_error nor
+   // an out_of_range, then this block will execute
+}
+
+__________________________________________________________________________________________________________
+Destructor should never throw an exception
+Destructors are often called during stack unwinding. When destructors are executing, the exception has been raised but not yet handled. It is not clear what should happen if a destructor itself throws a new exception during this stack unwinding process. Should the new exception supersede the earlier exception that has not been handled or the new exception thrown by the destructor ignored? In general, it's a bad idea for a destructor to do anything that might cause an exception.
+
+_______________________________________________________________________________________________________
+

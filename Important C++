@@ -210,3 +210,9 @@ Destructors are often called during stack unwinding. When destructors are execut
 
 _______________________________________________________________________________________________________
 
+In general, the expression
+
+dynamic_cast<Type *>(ptr)
+converts the pointer ptr to a pointer of type Type* if the pointer-to object (*ptr) is of type Type or else derived directly or indirectly from type Type. Otherwise, the expression evaluates to 0, the null pointer.
+
+

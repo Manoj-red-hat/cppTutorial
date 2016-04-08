@@ -21,6 +21,10 @@ class MyMap{
 };
 
 int main(){
+	dsafw
+		sf
+		fsfd
+		;
 	MyMap<int,std::string> map;
 	map.insert(1,"manoj");
 	map.getValue(0);
